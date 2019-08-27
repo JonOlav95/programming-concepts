@@ -1,0 +1,2 @@
+dailyneighbours/.idea
+.idea
