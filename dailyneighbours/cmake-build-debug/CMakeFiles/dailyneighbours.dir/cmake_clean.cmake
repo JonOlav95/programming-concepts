@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/dailyneighbours.dir/main.cpp.obj"
   "CMakeFiles/dailyneighbours.dir/solver.cpp.obj"
   "CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj"
+  "CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj"
+  "CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj"
   "dailyneighbours.pdb"
   "dailyneighbours.exe"
   "dailyneighbours.exe.manifest"

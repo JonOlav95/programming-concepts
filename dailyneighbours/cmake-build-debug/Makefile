@@ -176,6 +176,33 @@ solver.cpp.s:
 	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver.cpp.s
 .PHONY : solver.cpp.s
 
+solver_backtrack.obj: solver_backtrack.cpp.obj
+
+.PHONY : solver_backtrack.obj
+
+# target to build an object file
+solver_backtrack.cpp.obj:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj
+.PHONY : solver_backtrack.cpp.obj
+
+solver_backtrack.i: solver_backtrack.cpp.i
+
+.PHONY : solver_backtrack.i
+
+# target to preprocess a source file
+solver_backtrack.cpp.i:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.i
+.PHONY : solver_backtrack.cpp.i
+
+solver_backtrack.s: solver_backtrack.cpp.s
+
+.PHONY : solver_backtrack.s
+
+# target to generate assembly for a file
+solver_backtrack.cpp.s:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.s
+.PHONY : solver_backtrack.cpp.s
+
 solver_helpers.obj: solver_helpers.cpp.obj
 
 .PHONY : solver_helpers.obj
@@ -203,6 +230,33 @@ solver_helpers.cpp.s:
 	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.s
 .PHONY : solver_helpers.cpp.s
 
+solver_logic.obj: solver_logic.cpp.obj
+
+.PHONY : solver_logic.obj
+
+# target to build an object file
+solver_logic.cpp.obj:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj
+.PHONY : solver_logic.cpp.obj
+
+solver_logic.i: solver_logic.cpp.i
+
+.PHONY : solver_logic.i
+
+# target to preprocess a source file
+solver_logic.cpp.i:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_logic.cpp.i
+.PHONY : solver_logic.cpp.i
+
+solver_logic.s: solver_logic.cpp.s
+
+.PHONY : solver_logic.s
+
+# target to generate assembly for a file
+solver_logic.cpp.s:
+	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/solver_logic.cpp.s
+.PHONY : solver_logic.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -218,9 +272,15 @@ help:
 	@echo ... solver.obj
 	@echo ... solver.i
 	@echo ... solver.s
+	@echo ... solver_backtrack.obj
+	@echo ... solver_backtrack.i
+	@echo ... solver_backtrack.s
 	@echo ... solver_helpers.obj
 	@echo ... solver_helpers.i
 	@echo ... solver_helpers.s
+	@echo ... solver_logic.obj
+	@echo ... solver_logic.i
+	@echo ... solver_logic.s
 .PHONY : help
 
 

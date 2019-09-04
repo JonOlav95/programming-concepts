@@ -21,6 +21,9 @@ private:
     void setNeighbours();
     void initCells();
 
+    bool checkCloseNeighbour(int i, int j, bool find);
+    bool checkEndPoints(int i, int j, bool find);
+
 
 public:
     explicit Solver(const std::string& filename);

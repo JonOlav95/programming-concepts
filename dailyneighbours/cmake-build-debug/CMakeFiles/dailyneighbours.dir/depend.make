@@ -9,7 +9,13 @@ CMakeFiles/dailyneighbours.dir/solver.cpp.obj: ../cell.h
 CMakeFiles/dailyneighbours.dir/solver.cpp.obj: ../solver.cpp
 CMakeFiles/dailyneighbours.dir/solver.cpp.obj: ../solver.h
 
+CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj: ../solver_backtrack.cpp
+
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj: ../cell.h
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj: ../solver.h
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj: ../solver_helpers.cpp
+
+CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj: ../cell.h
+CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj: ../solver.h
+CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj: ../solver_logic.cpp
 

@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/main.cpp" "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/main.cpp.obj"
   "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver.cpp" "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver.cpp.obj"
+  "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_backtrack.cpp" "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj"
   "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_helpers.cpp" "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj"
+  "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_logic.cpp" "C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

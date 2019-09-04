@@ -5,20 +5,126 @@
 #include <sstream>
 #include "solver.h"
 
-void Solver::printResult()
+Solver::Solver(const std::string& filename)
 {
+    this->readFile(filename);
+    this->initSize();
+    this->initCells();
+}
+
+void Solver::initSize()
+{
+
+    cells.resize(size);
+    for(int i = 0; i < size; i++)
+    {
+        //cells[i].resize(size);
+        for(int j = 0; j < size; j++)
+        {
+            Cell* cell = new Cell(i, j, true);
+            cell->setValue(0);
+            cell->xPos = j;
+            cell->yPos = i;
+            cells[i].emplace_back(cell);
+        }
+
+    }
+}
+
+void Solver::initCells()
+{
+
     for(int i = 0; i < size; i++)
     {
 
-        for (int j = 0; j < size; j++)
+        for(int j = 0; j < size; j++)
         {
-            std::cout << cells[i][j]->value << " ";
+            if(isdigit(puzzleString[i * 2][j * 4]))
+            {
+                cells[i][j]->setValue(std::atoi(&puzzleString[i * 2][j * 4]));
+                cells[i][j]->changeable = false;
+            }
+
+
+            if(cells[i][j]->xPos != 0)
+            {
+                if(puzzleString[i * 2][j * 4 - 2] == 'x')
+                {
+                    cells[i][j]->addNeighbour(cells[i][j - 1]);
+                    cells[i][j - 1]->addNeighbour(cells[i][j]);
+                }
+            }
+
+            if(cells[i][j]->yPos != 0)
+            {
+                if(puzzleString[i * 2 - 1][j * 4] == 'x')
+                {
+                    cells[i][j]->addNeighbour(cells[i - 1][j]);
+                    cells[i - 1][j]->addNeighbour(cells[i][j]);
+                }
+            }
+        }
+
+
+    }
+
+}
+
+void Solver::printResult()
+{
+
+    for(int i = 0; i < puzzleString.size(); i++)
+    {
+
+        for(int j = 0; j < puzzleString[i].size(); j++)
+        {
+
+            if(i % 2 == 0)
+            {
+
+                if(j % 4 == 0)
+                {
+                    std::cout << cells[i / 2][j / 4]->value;
+                }
+                else if(cells[i / 2][j / 4]->xPos != (size - 1))
+                {
+                    if(puzzleString[i][j] == 'x')
+                    {
+                        std::cout << "-";
+                    }
+                    else
+                    {
+                        std::cout << " ";
+                    }
+                }
+            }
+            else
+            {
+                if(puzzleString[i][j] == 'x')
+                {
+                    std::cout << "|";
+                }
+                else
+                {
+                    std::cout << " ";
+                }
+            }
         }
 
         std::cout << "\n";
+
     }
+
+
+    std::cout << "\n";
+    for(int i = 0; i < puzzleString[0].size(); i++)
+    {
+        std::cout << "@";
+    }
+
     std::cout << "\n";
     std::cout << "\n";
+
 }
 
 void Solver::readFile(std::string filename)

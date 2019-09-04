@@ -1,102 +1,7 @@
 #include <iostream>
 #include "solver.h"
 
-Solver::Solver(const std::string& filename)
-{
-    this->readFile(filename);
-    this->initSize();
-    this->initCells();
-    this->setNeighbours();
-}
 
-void Solver::initSize()
-{
-
-    cells.resize(size);
-    for(int i = 0; i < size; i++)
-    {
-        //cells[i].resize(size);
-        for(int j = 0; j < size; j++)
-        {
-            Cell* cell = new Cell(i, j, true);
-            cell->setValue(0);
-            cells[i].emplace_back(cell);
-        }
-
-    }
-}
-
-
-
-void Solver::setNeighbours()
-{
-    for(int i = 0; i < size; i++)
-    {
-
-        for (int j = 0; j < size; j++)
-        {
-            if(cells[i][j]->value == 1)
-            {
-                for(auto& neighbour : cells[i][j]->neighbours)
-                {
-                    neighbour->setValue(2);
-                    neighbour->changeable = false;
-                }
-            }
-            else if(cells[i][j]->value == 4)
-            {
-                for(auto& neighbour : cells[i][j]->neighbours)
-                {
-                    neighbour->setValue(3);
-                    neighbour->changeable = false;
-                }
-
-            }
-
-
-        }
-    }
-}
-
-
-void Solver::initCells()
-{
-
-    for(int i = 0; i < size; i++)
-    {
-
-        for(int j = 0; j < size; j++)
-        {
-            if(isdigit(puzzleString[i * 2][j * 4]))
-            {
-                cells[i][j]->setValue(std::atoi(&puzzleString[i * 2][j * 4]));
-                cells[i][j]->changeable = false;
-            }
-
-
-            if(cells[i][j]->xPos != 0)
-            {
-                if(puzzleString[i * 2][j * 4 - 2] == 'x')
-                {
-                    cells[i][j]->addNeighbour(cells[i][j - 1]);
-                    cells[i][j - 1]->addNeighbour(cells[i][j]);
-                }
-            }
-
-            if(cells[i][j]->yPos != 0)
-            {
-                if(puzzleString[i * 2 - 1][j * 4] == 'x')
-                {
-                    cells[i][j]->addNeighbour(cells[i - 1][j]);
-                    cells[i - 1][j]->addNeighbour(cells[i][j]);
-                }
-            }
-        }
-
-
-    }
-
-}
 
 
 bool Solver::isValid(int x, int y, int val)
@@ -194,6 +99,8 @@ int Solver::deduct(int y, int x, int back)
 void Solver::solve()
 {
 
+    this->setNeighbours();
+
     for(int i = 0; i < size; i++)
     {
 
@@ -222,7 +129,7 @@ void Solver::stepBack(int& i, int& j, int back) {
         if(j == 0)
         {
             i--;
-            j = 3;
+            j = size - 1;
         }
         else
         {
@@ -240,7 +147,7 @@ int Solver::backtrackStep(int i, int j) {
 
     if(cells[i][j]->value == 0)
     {
-        for(int n = 4; n > 0; n--)
+        for(int n = size; n > 0; n--)
         {
             if(isValid(j, i, n))
             {

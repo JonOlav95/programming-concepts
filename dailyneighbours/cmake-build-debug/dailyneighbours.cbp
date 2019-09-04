@@ -92,7 +92,13 @@
 		<Unit filename="C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver.h">
 			<Option target="dailyneighbours"/>
 		</Unit>
+		<Unit filename="C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_backtrack.cpp">
+			<Option target="dailyneighbours"/>
+		</Unit>
 		<Unit filename="C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_helpers.cpp">
+			<Option target="dailyneighbours"/>
+		</Unit>
+		<Unit filename="C:/Users/Jon Olav/Documents/dat233/dailyneighbours/solver_logic.cpp">
 			<Option target="dailyneighbours"/>
 		</Unit>
 		<Unit filename="C:/Users/Jon Olav/Documents/dat233/dailyneighbours/CMakeLists.txt">

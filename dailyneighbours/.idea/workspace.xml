@@ -26,6 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Q0t7z1rbMTlJaEibCK8wSntT5p" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -65,11 +66,38 @@
       <option name="presentableId" value="Default" />
       <updated>1566919177848</updated>
       <workItem from="1566919179073" duration="22710000" />
-      <workItem from="1566946156744" duration="331000" />
+      <workItem from="1566946156744" duration="892000" />
+      <workItem from="1567094205294" duration="1255000" />
+      <workItem from="1567352648503" duration="12065000" />
+      <workItem from="1567622720402" duration="2764000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/solver_logic.cpp</url>
+          <line>16</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

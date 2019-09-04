@@ -1,9 +1,10 @@
 #include "solver.h"
 
+
 int main()
 {
     // Solver holds the functionality and data required to solve daily neighbours
-    Solver solver{"puzzle3.txt"};
+    Solver solver{"puzzle.txt"};
 
     // Print the unsolved result
     solver.printResult();

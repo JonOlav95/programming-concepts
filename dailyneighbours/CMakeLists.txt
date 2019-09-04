@@ -3,4 +3,4 @@ project(dailyneighbours)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(dailyneighbours main.cpp solver.h solver.cpp cell.h solver_helpers.cpp)
+add_executable(dailyneighbours main.cpp solver.h solver.cpp cell.h solver_helpers.cpp solver_backtrack.cpp solver_logic.cpp)
