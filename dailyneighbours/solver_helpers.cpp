@@ -181,3 +181,4 @@ void Solver::readFile(std::string filename)
     }
 
 }
+
