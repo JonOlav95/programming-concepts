@@ -3,11 +3,11 @@ import scala.util.matching.Regex
 class Solver (arg: String = null) {
 
   // Filename of the current file ready to be solved
-  var filename: String = arg;
+  var filename: String = arg
 
   // Size of the puzzle
-  var xSize = 0;
-  var ySize = 0;
+  var xSize = 0
+  var ySize = 0
 
   // Set up current puzzle
   def setPuzzle(filename: String): Unit = {

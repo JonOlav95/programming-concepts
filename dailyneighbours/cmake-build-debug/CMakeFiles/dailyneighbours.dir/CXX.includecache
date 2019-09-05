@@ -10,6 +10,10 @@ C:/Users/Jon-Olav/dat233/dailyneighbours/cell.h
 vector
 -
 
+C:/Users/Jon-Olav/dat233/dailyneighbours/main.cpp
+solver.h
+C:/Users/Jon-Olav/dat233/dailyneighbours/solver.h
+
 C:/Users/Jon-Olav/dat233/dailyneighbours/solver.h
 vector
 -
@@ -17,10 +21,4 @@ string
 -
 cell.h
 C:/Users/Jon-Olav/dat233/dailyneighbours/cell.h
-
-C:/Users/Jon-Olav/dat233/dailyneighbours/solver_backtrack.cpp
-iostream
--
-solver.h
-C:/Users/Jon-Olav/dat233/dailyneighbours/solver.h
 
