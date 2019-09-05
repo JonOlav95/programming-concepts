@@ -49,19 +49,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Users\Jon Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = "C:\Users\Jon Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jon-Olav\dat233\dailyneighbours
+CMAKE_SOURCE_DIR = "C:\Users\Jon Olav\Documents\dat233\dailyneighbours"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug"
 
 #=============================================================================
 # Target rules for target CMakeFiles/dailyneighbours.dir
@@ -70,7 +70,7 @@ CMAKE_BINARY_DIR = C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug
 CMakeFiles/dailyneighbours.dir/all:
 	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/depend
 	$(MAKE) -f CMakeFiles\dailyneighbours.dir\build.make CMakeFiles/dailyneighbours.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5 "Built target dailyneighbours"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5 "Built target dailyneighbours"
 .PHONY : CMakeFiles/dailyneighbours.dir/all
 
 # Include target in all.
@@ -80,9 +80,9 @@ all: CMakeFiles/dailyneighbours.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/dailyneighbours.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" 5
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/dailyneighbours.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/dailyneighbours.dir/rule
 
 # Convenience name for target.

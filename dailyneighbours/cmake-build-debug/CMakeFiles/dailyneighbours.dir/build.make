@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Users\Jon Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = "C:\Users\Jon Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jon-Olav\dat233\dailyneighbours
+CMAKE_SOURCE_DIR = "C:\Users\Jon Olav\Documents\dat233\dailyneighbours"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug
+CMAKE_BINARY_DIR = "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/dailyneighbours.dir/depend.make
@@ -58,55 +58,55 @@ include CMakeFiles/dailyneighbours.dir/flags.make
 
 CMakeFiles/dailyneighbours.dir/main.cpp.obj: CMakeFiles/dailyneighbours.dir/flags.make
 CMakeFiles/dailyneighbours.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dailyneighbours.dir/main.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\main.cpp.obj -c C:\Users\Jon-Olav\dat233\dailyneighbours\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/dailyneighbours.dir/main.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\main.cpp.obj -c "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\main.cpp"
 
 CMakeFiles/dailyneighbours.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dailyneighbours.dir/main.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jon-Olav\dat233\dailyneighbours\main.cpp > CMakeFiles\dailyneighbours.dir\main.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\main.cpp" > CMakeFiles\dailyneighbours.dir\main.cpp.i
 
 CMakeFiles/dailyneighbours.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dailyneighbours.dir/main.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jon-Olav\dat233\dailyneighbours\main.cpp -o CMakeFiles\dailyneighbours.dir\main.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\main.cpp" -o CMakeFiles\dailyneighbours.dir\main.cpp.s
 
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj: CMakeFiles/dailyneighbours.dir/flags.make
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj: ../solver_helpers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.obj -c C:\Users\Jon-Olav\dat233\dailyneighbours\solver_helpers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.obj -c "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_helpers.cpp"
 
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jon-Olav\dat233\dailyneighbours\solver_helpers.cpp > CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_helpers.cpp" > CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.i
 
 CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dailyneighbours.dir/solver_helpers.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jon-Olav\dat233\dailyneighbours\solver_helpers.cpp -o CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_helpers.cpp" -o CMakeFiles\dailyneighbours.dir\solver_helpers.cpp.s
 
 CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj: CMakeFiles/dailyneighbours.dir/flags.make
 CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj: ../solver_backtrack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.obj -c C:\Users\Jon-Olav\dat233\dailyneighbours\solver_backtrack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.obj -c "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_backtrack.cpp"
 
 CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jon-Olav\dat233\dailyneighbours\solver_backtrack.cpp > CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_backtrack.cpp" > CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.i
 
 CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jon-Olav\dat233\dailyneighbours\solver_backtrack.cpp -o CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_backtrack.cpp" -o CMakeFiles\dailyneighbours.dir\solver_backtrack.cpp.s
 
 CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj: CMakeFiles/dailyneighbours.dir/flags.make
 CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj: ../solver_logic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj"
-	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_logic.cpp.obj -c C:\Users\Jon-Olav\dat233\dailyneighbours\solver_logic.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj"
+	C:\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\dailyneighbours.dir\solver_logic.cpp.obj -c "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_logic.cpp"
 
 CMakeFiles/dailyneighbours.dir/solver_logic.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dailyneighbours.dir/solver_logic.cpp.i"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jon-Olav\dat233\dailyneighbours\solver_logic.cpp > CMakeFiles\dailyneighbours.dir\solver_logic.cpp.i
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_logic.cpp" > CMakeFiles\dailyneighbours.dir\solver_logic.cpp.i
 
 CMakeFiles/dailyneighbours.dir/solver_logic.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dailyneighbours.dir/solver_logic.cpp.s"
-	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jon-Olav\dat233\dailyneighbours\solver_logic.cpp -o CMakeFiles\dailyneighbours.dir\solver_logic.cpp.s
+	C:\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\solver_logic.cpp" -o CMakeFiles\dailyneighbours.dir\solver_logic.cpp.s
 
 # Object files for target dailyneighbours
 dailyneighbours_OBJECTS = \
@@ -126,7 +126,7 @@ dailyneighbours.exe: CMakeFiles/dailyneighbours.dir/build.make
 dailyneighbours.exe: CMakeFiles/dailyneighbours.dir/linklibs.rsp
 dailyneighbours.exe: CMakeFiles/dailyneighbours.dir/objects1.rsp
 dailyneighbours.exe: CMakeFiles/dailyneighbours.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable dailyneighbours.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable dailyneighbours.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\dailyneighbours.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -139,6 +139,6 @@ CMakeFiles/dailyneighbours.dir/clean:
 .PHONY : CMakeFiles/dailyneighbours.dir/clean
 
 CMakeFiles/dailyneighbours.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Jon-Olav\dat233\dailyneighbours C:\Users\Jon-Olav\dat233\dailyneighbours C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug C:\Users\Jon-Olav\dat233\dailyneighbours\cmake-build-debug\CMakeFiles\dailyneighbours.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours\cmake-build-debug\CMakeFiles\dailyneighbours.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/dailyneighbours.dir/depend
 

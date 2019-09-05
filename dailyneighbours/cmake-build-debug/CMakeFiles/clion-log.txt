@@ -1,4 +1,4 @@
-C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Jon-Olav\dat233\dailyneighbours
+"C:\Users\Jon Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\192.5728.100\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\Jon Olav\Documents\dat233\dailyneighbours"
 -- The C compiler identification is GNU 7.3.0
 -- The CXX compiler identification is GNU 7.3.0
 -- Check for working C compiler: C:/mingw64/bin/gcc.exe
@@ -15,4 +15,4 @@ C:\Users\Jon-Olav\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\191.7479.33\bi
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/Jon-Olav/dat233/dailyneighbours/cmake-build-debug
+-- Build files have been written to: C:/Users/Jon Olav/Documents/dat233/dailyneighbours/cmake-build-debug
