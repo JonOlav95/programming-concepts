@@ -33,7 +33,7 @@ class Solver (arg: String = null) {
 
     // Remove the size line as it is no longer necessary
     lines = lines.substring(lines.indexOf("\n") + 1)
-    println(lines);
+    println(lines)
 
   }
 

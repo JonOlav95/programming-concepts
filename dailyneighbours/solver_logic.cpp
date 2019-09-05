@@ -5,7 +5,7 @@
 
 bool Solver::checkCloseNeighbour(int i, int j, bool find)
 {
-
+    int value = cells[i][j]->value;
     for(auto& neighbour : cells[i][j]->neighbours)
     {
         if(neighbour->value != 0)
@@ -14,7 +14,7 @@ bool Solver::checkCloseNeighbour(int i, int j, bool find)
         if(neighbour->yPos == cells[i][j]->yPos)
         {
 
-            int value = cells[i][j]->value;
+
             if(std::any_of(cells[i].begin(), cells[i].end(), [value](Cell*& cell){ return cell->value == (value - 1); }))
             {
                 neighbour->value = value + 1;
@@ -26,6 +26,20 @@ bool Solver::checkCloseNeighbour(int i, int j, bool find)
                 neighbour->value = value - 1;
                 neighbour->changeable = false;
                 find = true;
+            } else if(!(isValid(neighbour->xPos, neighbour->yPos, value - 1) && isValid(neighbour->xPos, neighbour->yPos, value + 1)))
+            {
+                if(isValid(neighbour->xPos, neighbour->yPos, value - 1))
+                {
+                    neighbour->value = value - 1;
+                    neighbour->changeable = false;
+                    find = true;
+                }
+                else
+                {
+                    neighbour->value = value + 1;
+                    neighbour->changeable = false;
+                    find = true;
+                }
             }
 
         }
@@ -47,6 +61,28 @@ bool Solver::checkCloseNeighbour(int i, int j, bool find)
                 find = true;
             }
         }
+
+        for(auto& innerNeighbour : neighbour->neighbours)
+        {
+            if(innerNeighbour != cells[i][j] && innerNeighbour->value != 0)
+            {
+                if(innerNeighbour->value == value + 2)
+                {
+                    neighbour->value = value + 1;
+                    neighbour->changeable = false;
+                    find = true;
+                    break;
+                }
+                else if (innerNeighbour->value == value - 2)
+                {
+                    neighbour->value = value - 1;
+                    neighbour->changeable = false;
+                    find = true;
+                    break;
+                }
+            }
+        }
+
     }
 
     return find;
