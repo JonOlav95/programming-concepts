@@ -1,17 +1,16 @@
-import scala.util.matching.Regex
 
 object main {
 
-
-
   def main(args: Array[String]): Unit = {
 
-    val solver = new Solver()
-    solver.setPuzzle("puzzle.txt")
+    val solver = new Solver("puzzle.txt")
     solver.solvePuzzle()
 
-    var cell = new Cell(3, 4)
+    solver.setPuzzle("puzzle2.txt")
+    solver.solvePuzzle()
 
+    solver.setPuzzle("puzzle5.txt")
+    solver.solvePuzzle()
 
   }
 }

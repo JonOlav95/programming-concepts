@@ -1,13 +1,8 @@
-import scala.util.matching.Regex
 
 class Solver (arg: String = null) {
 
   // Filename of the current file ready to be solved
   var filename: String = arg
-
-  // Size of the puzzle
-  var xSize = 0
-  var ySize = 0
 
   // Set up current puzzle
   def setPuzzle(filename: String): Unit = {
@@ -16,25 +11,36 @@ class Solver (arg: String = null) {
 
   def solvePuzzle(): Unit = {
 
+    // Make sure a puzzle is chosen either through the constructor or by the @setPuzzle function
     if(this.filename == null){
       println("Need to set puzzle")
       return
     }
 
-    // Read the filename
-    val source = scala.io.Source.fromFile(this.filename)
-    var lines = try source.mkString finally source.close()
+    val solverHelper = new SolverHelper();
 
-    // Using regex to read and set size of the puzzle
-    val pattern = "\\d".r
-    val result = pattern.findAllIn(lines).toArray
-    this.xSize = result(0).toInt
-    this.ySize = result(1).toInt
+    // Find size of the puzzle and create cells from the filename
+    val size = solverHelper.parse(this.filename)
+    val cells = solverHelper.createCells(size)
 
-    // Remove the size line as it is no longer necessary
-    lines = lines.substring(lines.indexOf("\n") + 1)
-    println(lines)
+    // Print the unsolved puzzle
+    solverHelper.printPuzzle(size, cells)
 
+    val logicOperator = new LogicOperator(cells, size)
+    logicOperator.logic()
+
+    val backtracker = new Backtracker(cells, size);
+    backtracker.backtrack(0, 0, size, forward = true)
+
+    // Print the solved puzzle
+    solverHelper.printPuzzle(size, cells)
   }
+
+
+
+
+
+
+
 
 }

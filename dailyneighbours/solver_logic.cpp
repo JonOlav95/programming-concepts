@@ -98,7 +98,8 @@ bool Solver::checkEndPoints(int i, int j, bool find)
         for(auto& neighbour : cells[i][j]->neighbours)
         {
 
-            if(neighbour->value == 1)
+            //TODO: 0??
+            if(neighbour->value == 0)
             {
                 neighbour->setValue(2);
                 neighbour->changeable = false;
