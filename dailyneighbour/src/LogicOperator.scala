@@ -2,11 +2,11 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
   def logic(): Unit = {
 
-    val yrange = 0 until size
-    val xrange = 0 until size
+    val yRange = 0 until size
+    val xRange = 0 until size
 
-    yrange.foreach(y => {
-      xrange.foreach(x => {
+    yRange.foreach(y => {
+      xRange.foreach(x => {
 
         if(cells(y)(x).getValue != 0){
           this.checkEndPoints(y, x)
@@ -15,7 +15,7 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
       })
     })
-    
+
   }
 
 

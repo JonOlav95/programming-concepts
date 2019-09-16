@@ -74,14 +74,14 @@ class SolverHelper {
         if(cells(y)(x).getValue != 0){
           print(cells(y)(x).getValue)
         } else {
-          print('_')
+          print('0')
         }
 
         print(" ")
 
         if(x < size - 1){
           if(cells(y)(x).neighbours.contains(cells(y)(x + 1))){
-            print("x")
+            print("-")
           } else {
             print(" ")
           }
@@ -96,7 +96,7 @@ class SolverHelper {
       if(y < size - 1){
         for(i <- 0 until size) {
           if(cells(y)(i).neighbours.contains(cells(y + 1)(i))){
-            print("x")
+            print("|")
           } else {
             print(" ")
           }

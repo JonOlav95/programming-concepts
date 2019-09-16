@@ -129,3 +129,4 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
   }
 
 }
+
