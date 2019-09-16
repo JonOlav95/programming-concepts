@@ -96,6 +96,7 @@ int Solver::deduct(int y, int x, int back)
 void Solver::solve()
 {
 
+    int steps = 0;
     this->setNeighbours();
 
     for(int i = 0; i < size; i++)
@@ -110,6 +111,8 @@ void Solver::solve()
 
             // Find a value for the current marked cell, returns amount of backtracks made
             int back = backtrackStep(i, j);
+            steps ++;
+            std::cout << steps << std::endl;
 
             // Apply the backtracks to the appropriate cell
             stepBack(i, j, back);

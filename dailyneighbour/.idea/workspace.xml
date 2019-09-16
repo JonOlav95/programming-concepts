@@ -2,25 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8a48ee-5587-47f2-b75a-ad4c82794cfd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Cell.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Cell.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Solver$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Solver$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Solver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Solver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/SolverHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/SolverHelper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/test$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/test$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Cell.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Cell.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backtracker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtracker.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicOperator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicOperator.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Solver.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solver.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SolverHelper.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/SolverHelper.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dailyneighbours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/CXX.includecache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_logic.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/solver_backtrack.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/dailyneighbours.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/dailyneighbours.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/solver_logic.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/solver_logic.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dailyneighbours/solver_backtrack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/solver_backtrack.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,6 +144,7 @@
       <workItem from="1567891901717" duration="1218000" />
       <workItem from="1567949051164" duration="15139000" />
       <workItem from="1568038041634" duration="17178000" />
+      <workItem from="1568644683852" duration="15578000" />
     </task>
     <servers />
   </component>

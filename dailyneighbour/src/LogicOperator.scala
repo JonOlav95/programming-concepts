@@ -2,19 +2,20 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
   def logic(): Unit = {
 
+    val yrange = 0 until size
+    val xrange = 0 until size
 
-    for (y <- 0 until size) {
-      for (x <- 0 until size) {
+    yrange.foreach(y => {
+      xrange.foreach(x => {
 
         if(cells(y)(x).getValue != 0){
           this.checkEndPoints(y, x)
           this.checkCloseNeighbour(y, x)
         }
 
-      }
-    }
-
-
+      })
+    })
+    
   }
 
 

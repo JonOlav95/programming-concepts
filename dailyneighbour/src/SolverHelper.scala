@@ -12,7 +12,7 @@ class SolverHelper {
     this.lines = try source.mkString finally source.close()
 
     // Using regex to read and set size of the puzzle
-    val pattern = "\\d".r
+    val pattern = "\\d+".r
     val result = pattern.findAllIn(lines).toArray
     var size = result(0).toInt
 

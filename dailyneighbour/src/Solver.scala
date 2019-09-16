@@ -29,8 +29,10 @@ class Solver (arg: String = null) {
     val logicOperator = new LogicOperator(cells, size)
     logicOperator.logic()
 
+    solverHelper.printPuzzle(size, cells)
+
     val backtracker = new Backtracker(cells, size);
-    backtracker.backtrack(0, 0, size, forward = true)
+    backtracker.start()
 
     // Print the solved puzzle
     solverHelper.printPuzzle(size, cells)

@@ -10,5 +10,10 @@ object test {
       print(n)
 
     }
+
+    val a = 1 to 10
+    val b = 1 to 10
+
+    a.foreach(y => { b.foreach(x => println("y: " + y + "x: " + x) )})
   }
 }
