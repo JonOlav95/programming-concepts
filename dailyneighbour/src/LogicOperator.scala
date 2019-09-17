@@ -19,16 +19,16 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
       xRange.foreach(x => {
 
         if(cells(y)(x).getValue != 0){
-          bools.append(this.checkEndPoints(y, x))
-          bools.append(this._noneNeighbour(cells(x)(y)))
+          //bools.append(this.checkEndPoints(y, x))
+          bools.append(neighbourChain(cells(y)(x)))
         } else {
-          bools.append(this._noneNeighbour(cells(x)(y)))
+          bools.append(this._noneNeighbour(cells(y)(x)))
         }
 
       })
     })
 
-    bools.append(neighbourChain())
+
 
     if(bools.contains(true)){
       println("\n\nLogic Recursion")
@@ -75,67 +75,6 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
   }
 
-  /* If there is a cell with the value n and an horizontal neighbour, the function checks is the row with the cells
-  has a cell with value (n - 1) or (n + 1). If a cell with value (n - 1) exists, the neighbour is given value (n + 1),
-  as it is the only possible option. And naturally the other way around if a cell in the row with value (n + 1) exists.
-  For vertical neighbours the column is checked and the same operations are performed. */
-  private def checkCloseNeighbour(y: Int, x: Int): Boolean = {
-
-    var cellVal = cells(y)(x).getValue
-
-    cells(y)(x).neighbours.foreach(
-      neighbour =>
-        if(neighbour.getValue == 0 && neighbour.getChangeable){
-
-          if(y == neighbour.getY){
-            if(cells(y).exists(x => x.getValue == cellVal - 1)){
-
-              neighbour.setValue(cellVal + 1)
-              neighbour.setChangeable(false)
-              return true
-
-            }
-
-            else if(cells(y).exists(x => x.getValue == cellVal + 1)){
-
-              neighbour.setValue(cellVal - 1)
-              neighbour.setChangeable(false)
-              return true
-
-            }
-
-
-
-          }
-
-          if(x == neighbour.getX){
-
-            for(i <- 0 until size){
-
-              if(cells(i)(x).getValue == cellVal + 1){
-                neighbour.setValue(cellVal - 1)
-                neighbour.setChangeable(false)
-                return true
-
-              }
-
-              else if(cells(i)(x).getValue == cellVal - 1){
-                neighbour.setValue(cellVal + 1)
-                neighbour.setChangeable(false)
-                return true
-              }
-
-            }
-
-
-          }
-
-        }
-    )
-
-    false
-  }
-
   private def _noneHelper(cell: Cell, exclude: ArrayBuffer[Int]): Boolean = {
 
     if(cell.getValue != 0 || !cell.getChangeable){
@@ -172,40 +111,29 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
     val exclude = ArrayBuffer[Int]()
 
 
-    if(cell.getY != 0){
-      if(!cell.neighbours.contains(cells(cell.getY - 1)(cell.getX))){
-        if(cells(cell.getY - 1)(cell.getX).getValue != 0){
-          exclude.append(cells(cell.getY - 1)(cell.getX).getValue + 1)
-          exclude.append(cells(cell.getY - 1)(cell.getX).getValue - 1)
+    val checkAdj = (innerCell: Cell) => {
+      if(!cell.neighbours.contains(innerCell)) {
+        if(innerCell.getValue != 0){
+          exclude.append(innerCell.getValue + 1)
+          exclude.append(innerCell.getValue - 1)
         }
       }
+    }
+
+    if(cell.getY != 0){
+      checkAdj(cells(cell.getY - 1)(cell.getX))
     }
 
     if(cell.getY != size - 1){
-      if(!cell.neighbours.contains(cells(cell.getY + 1)(cell.getX))){
-        if(cells(cell.getY + 1)(cell.getX).getValue != 0){
-          exclude.append(cells(cell.getY + 1)(cell.getX).getValue + 1)
-          exclude.append(cells(cell.getY + 1)(cell.getX).getValue - 1)
-        }
-      }
+      checkAdj(cells(cell.getY + 1)(cell.getX))
     }
 
     if(cell.getX != 0){
-      if(!cell.neighbours.contains(cells(cell.getY)(cell.getX - 1))){
-        if(cells(cell.getY)(cell.getX - 1).getValue != 0){
-          exclude.append(cells(cell.getY)(cell.getX - 1).getValue + 1)
-          exclude.append(cells(cell.getY)(cell.getX - 1).getValue - 1)
-        }
-      }
+      checkAdj(cells(cell.getY)(cell.getX - 1))
     }
 
     if(cell.getX != size - 1){
-      if(!cell.neighbours.contains(cells(cell.getY)(cell.getX + 1))){
-        if(cells(cell.getY)(cell.getX + 1).getValue != 0){
-          exclude.append(cells(cell.getY)(cell.getX + 1).getValue + 1)
-          exclude.append(cells(cell.getY)(cell.getX + 1).getValue - 1)
-        }
-      }
+      checkAdj(cells(cell.getY)(cell.getX + 1))
     }
 
     if(_noneHelper(cell, exclude))
@@ -214,6 +142,7 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
       false
   }
 
+  @scala.annotation.tailrec
   private def _setChainValues(cell: Cell, yItr: (Int) => Int, xItr: (Int) => Int, valueItr: (Int) => Int): Unit = {
     val y = yItr(cell.getY)
     val x = xItr(cell.getX)
@@ -262,61 +191,51 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
 
 
-  private def neighbourChain(): Boolean = {
+  private def neighbourChain(cell: Cell): Boolean = {
 
-    val range = 0 until size
     var found = false
+    val value = cell.getValue
 
 
-    range.foreach(y => {
-      range.foreach(x => {
+    if(!_neighbourChainHelper(cell, (y: Int) => y, (x: Int) => x + 1, (v: Int) => v + 1, value)){
+      _setChainValues(cell, (y: Int) => y, (x: Int) => x + 1, (v: Int) => v - 1)
+      found = true
+    }
 
-        if(cells(y)(x).getValue != 0){
+    if(!_neighbourChainHelper(cell, (y: Int) => y, (x: Int) => x - 1, (v: Int) => v + 1, value)){
+      _setChainValues(cell, (y: Int) => y, (x: Int) => x - 1, (v: Int) => v - 1)
+      found = true
+    }
 
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y, (x: Int) => x + 1, (v: Int) => v + 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y, (x: Int) => x + 1, (v: Int) => v - 1)
-            found = true
-          }
+    if(!_neighbourChainHelper(cell, (y: Int) => y + 1, (x: Int) => x, (v: Int) => v + 1, value)){
+      _setChainValues(cell, (y: Int) => y + 1, (x: Int) => x, (v: Int) => v - 1)
+      found = true
+    }
 
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y, (x: Int) => x - 1, (v: Int) => v + 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y, (x: Int) => x - 1, (v: Int) => v - 1)
-            found = true
-          }
+    if(!_neighbourChainHelper(cell, (y: Int) => y - 1, (x: Int) => x, (v: Int) => v + 1, value)){
+      _setChainValues(cell, (y: Int) => y - 1, (x: Int) => x, (v: Int) => v - 1)
+      found = true
+    }
 
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y + 1, (x: Int) => x, (v: Int) => v + 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y + 1, (x: Int) => x, (v: Int) => v - 1)
-            found = true
-          }
+    if(!_neighbourChainHelper(cell, (y: Int) => y, (x: Int) => x + 1, (v: Int) => v - 1, value)){
+      _setChainValues(cell, (y: Int) => y, (x: Int) => x + 1, (v: Int) => v + 1)
+      found = true
+    }
 
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y - 1, (x: Int) => x, (v: Int) => v + 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y - 1, (x: Int) => x, (v: Int) => v - 1)
-            found = true
-          }
+    if(!_neighbourChainHelper(cell, (y: Int) => y, (x: Int) => x - 1, (v: Int) => v - 1, value)){
+      _setChainValues(cell, (y: Int) => y, (x: Int) => x - 1, (v: Int) => v + 1)
+      found = true
+    }
 
+    if(!_neighbourChainHelper(cell, (y: Int) => y + 1, (x: Int) => x, (v: Int) => v - 1, value)){
+      _setChainValues(cell, (y: Int) => y + 1, (x: Int) => x, (v: Int) => v + 1)
+      found = true
+    }
 
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y, (x: Int) => x + 1, (v: Int) => v - 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y, (x: Int) => x + 1, (v: Int) => v + 1)
-            found = true
-          }
-
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y, (x: Int) => x - 1, (v: Int) => v - 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y, (x: Int) => x - 1, (v: Int) => v + 1)
-            found = true
-          }
-
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y + 1, (x: Int) => x, (v: Int) => v - 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y + 1, (x: Int) => x, (v: Int) => v + 1)
-            found = true
-          }
-
-          if(!_neighbourChainHelper(cells(y)(x), (y: Int) => y - 1, (x: Int) => x, (v: Int) => v - 1, cells(y)(x).getValue)){
-            _setChainValues(cells(y)(x), (y: Int) => y - 1, (x: Int) => x, (v: Int) => v + 1)
-            found = true
-          }
-
-        }
-      })
-    })
+    if(!_neighbourChainHelper(cell, (y: Int) => y - 1, (x: Int) => x, (v: Int) => v - 1, value)){
+      _setChainValues(cell, (y: Int) => y - 1, (x: Int) => x, (v: Int) => v + 1)
+      found = true
+    }
 
     found
   }
@@ -358,6 +277,9 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
 
     true
   }
+
+
+
 
 
 }
