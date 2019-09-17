@@ -1,11 +1,8 @@
-import scala.util.matching.Regex
-
-class SolverHelper {
-
+object SolverHelper {
 
   var lines: String = new String
 
-  def parse(filename: String): Int ={
+  def parse(filename: String): Int = {
 
     // Read the filename
     val source = scala.io.Source.fromFile(filename)
@@ -14,7 +11,7 @@ class SolverHelper {
     // Using regex to read and set size of the puzzle
     val pattern = "\\d+".r
     val result = pattern.findAllIn(lines).toArray
-    var size = result(0).toInt
+    val size = result(0).toInt
 
     // Remove the size line as it is no longer necessary
     this.lines = lines.substring(lines.indexOf("\n") + 1)
@@ -74,7 +71,7 @@ class SolverHelper {
         if(cells(y)(x).getValue != 0){
           print(cells(y)(x).getValue)
         } else {
-          print('0')
+          print('*')
         }
 
         print(" ")
@@ -107,8 +104,6 @@ class SolverHelper {
       }
 
     }
-
-
 
   }
 

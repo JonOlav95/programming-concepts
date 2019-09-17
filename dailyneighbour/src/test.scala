@@ -2,18 +2,30 @@
 
 object test {
 
+  def tester(tmp: Any): Unit = {
+
+
+  }
+
 
   def main(args: Array[String]): Unit = {
 
 
-    for(n <- 10 to 0 by -1){
-      print(n)
+    val a = -1 to 1
 
-    }
+    var pattern = Array(1, -1, 0, 0)
 
-    val a = 1 to 10
-    val b = 1 to 10
+    pattern.foreach(x => {
 
-    a.foreach(y => { b.foreach(x => println("y: " + y + "x: " + x) )})
+    })
+
+    var dd = {((1, 0), (-1, 0), (0, -1), (0, 1))}
+
+
+
+
+    var c = (x:Int) => x + 1
+    tester((x:Int) => x + 1)
+
   }
 }

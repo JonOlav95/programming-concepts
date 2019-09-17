@@ -3,14 +3,13 @@ object main {
 
   def main(args: Array[String]): Unit = {
 
-    val solver = new Solver("puzzlebig.txt")
-    solver.solvePuzzle()
 
-    //solver.setPuzzle("puzzle2.txt")
-  //  solver.solvePuzzle()
+    val t1 = System.nanoTime
 
-  //  solver.setPuzzle("puzzle5.txt")
-   // solver.solvePuzzle()
+    Solver.solvePuzzle("puzzle.txt")
+
+    val duration = (System.nanoTime - t1) / 1e9d
+    println("TIME: " + duration)
 
   }
 }

@@ -2,10 +2,13 @@ import scala.annotation.tailrec
 
 class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) {
 
+  // Initiate the backtracking algorithm at the cell in position x: 0, y: 0
   def start(): Unit = {
     _loop(cells(0)(0))
   }
 
+  /* Recursively iterates through all the cells in the puzzle assigning values when possible, and backtracking
+  when not possible. */
   @tailrec
   private def _loop(cell: Cell): Unit = {
 
@@ -29,9 +32,15 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
   }
 
 
+  /* Incrementally assigns a value to a cell starting at the maximum valid value for the current puzzle.
+  The incrementation is performed recursively.
+  If there is no value between the maximum valid value and 1, the function returns false, otherwise
+  the function sets first found valid value and returns true.
+   */
   @tailrec
   private def _assignValue(cell: Cell, value: Int = size): Boolean = {
 
+    // Value recursively incremented down to 0, meaning there is no valid value, returns false
     if(value == 0){
       return false
     }
@@ -46,6 +55,7 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
   }
 
 
+  // Checks if the value at the given position follows the daily neighbours puzzle constraints
   private def isValid(y: Int, x: Int, value: Int): Boolean = {
 
 
@@ -78,6 +88,9 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
     true
   }
 
+  /* The backtracking function increments the value of the given cell by 1 until it finds a valid value.
+  If there is no such valid value, the functions sets the value of the cell to be 0, and then recursively calls itself
+  to work on the previous cell. */
   @tailrec
   private def _backtrack(cell: Cell): Cell = {
 
@@ -98,6 +111,8 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
   }
 
 
+
+  // Finds the previous changeable cell to the given cell
   @tailrec
   private def _prevValid(cell: Cell): Cell = {
     if(cell.getX == 0){
@@ -120,6 +135,7 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
 
   }
 
+  // Finds the next cell to the given cell
   private def _nextNode(cell: Cell) : Cell = {
     if(cell.getX == size - 1){
       cells(cell.getY + 1)(0)
