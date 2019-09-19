@@ -3,10 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8b8a48ee-5587-47f2-b75a-ad4c82794cfd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/test$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/test$.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Backtracker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtracker.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LogicOperator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicOperator.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +135,9 @@
       <workItem from="1567949051164" duration="15139000" />
       <workItem from="1568038041634" duration="17178000" />
       <workItem from="1568644683852" duration="40858000" />
+      <workItem from="1568730606360" duration="804000" />
+      <workItem from="1568739649670" duration="3353000" />
+      <workItem from="1568869306248" duration="4496000" />
     </task>
     <servers />
   </component>

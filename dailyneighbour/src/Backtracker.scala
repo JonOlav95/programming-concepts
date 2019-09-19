@@ -2,6 +2,9 @@ import scala.annotation.tailrec
 
 class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) {
 
+  val vc = new ValidChecker(cells, size)
+  var steps = 0
+
   // Initiate the backtracking algorithm at the cell in position x: 0, y: 0
   def start(): Unit = {
     _loop(cells(0)(0))
@@ -12,11 +15,13 @@ class Backtracker(private var cells: Array[Array[Cell]], private val size: Int) 
   @tailrec
   private def _loop(cell: Cell): Unit = {
 
+    steps += 1;
+    println(steps)
+
     var itrCell = cell
 
     if(cell.getChangeable){
       if(!_assignValue(cell)){
-
 
         itrCell = _backtrack(_prevValid(cell))
 

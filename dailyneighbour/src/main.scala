@@ -6,7 +6,7 @@ object main {
 
     val t1 = System.nanoTime
 
-    Solver.solvePuzzle("puzzle.txt")
+    Solver.solvePuzzle("puzzle5.txt")
 
     val duration = (System.nanoTime - t1) / 1e9d
     println("TIME: " + duration)
