@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8b8a48ee-5587-47f2-b75a-ad4c82794cfd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Backtracker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/LogicOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/Solver$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/Solver$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/dailyneighbour/main$.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/test$.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/dailyneighbour/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/puzzlebig.txt" beforeDir="false" afterPath="$PROJECT_DIR$/puzzlebig.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Backtracker.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Backtracker.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LogicOperator.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicOperator.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Solver.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/Solver.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/CMakeFiles/dailyneighbours.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/dailyneighbours.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/cmake-build-debug/dailyneighbours.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dailyneighbours/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../dailyneighbours/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -148,7 +131,7 @@
       <workItem from="1568739649670" duration="3353000" />
       <workItem from="1568869306248" duration="7039000" />
       <workItem from="1568881885020" duration="59000" />
-      <workItem from="1568881960948" duration="3053000" />
+      <workItem from="1568881960948" duration="3765000" />
     </task>
     <servers />
   </component>
