@@ -1,15 +1,10 @@
 
+// Main runs the puzzle given the file name
 object main {
 
   def main(args: Array[String]): Unit = {
 
-
-    val t1 = System.nanoTime
-
-    Solver.solvePuzzle("puzzle5.txt")
-
-    val duration = (System.nanoTime - t1) / 1e9d
-    println("TIME: " + duration)
+    Solver.solvePuzzle("puzzlebig2.txt")
 
   }
 }

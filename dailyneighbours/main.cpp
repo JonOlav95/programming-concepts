@@ -4,7 +4,7 @@
 int main()
 {
     // Solver holds the functionality and data required to solve daily neighbours
-    Solver solver{"puzzle2.txt"};
+    Solver solver{"puzzlebig.txt"};
 
     // Print the unsolved result
     solver.printResult();
