@@ -4,7 +4,7 @@ object main {
 
   def main(args: Array[String]): Unit = {
 
-    Solver.solvePuzzle("puzzlebig2.txt")
+    Solver.solvePuzzle("puzzle_unsolved.txt")
 
   }
 }

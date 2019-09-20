@@ -1,6 +1,30 @@
+
+
 object SolverHelper {
 
   var lines: String = new String
+
+  def parse2(filename: String): Int = {
+
+    // Read the filename
+    val source = scala.io.Source.fromFile(filename)
+    this.lines = try source.mkString finally source.close()
+
+    // Using regex to read and set size of the puzzle
+    val firstDigit = "\\d+".r
+    val result = firstDigit.findAllIn(lines).toArray
+    val puzzleAmount = result(0).toInt
+
+    val pattern = """(?s)size(.*?)s""".r.findFirstIn(lines).toString
+    lines = pattern.substring(pattern.indexOf("\n") + 1)
+
+    // Remove the size line as it is no longer necessary
+    this.lines = lines.substring(lines.indexOf("\n") + 1)
+
+
+
+    return puzzleAmount
+  }
 
   def parse(filename: String): Int = {
 
@@ -15,6 +39,8 @@ object SolverHelper {
 
     // Remove the size line as it is no longer necessary
     this.lines = lines.substring(lines.indexOf("\n") + 1)
+
+
 
     return size
   }

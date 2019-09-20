@@ -52,32 +52,6 @@ class LogicOperator(private var cells: Array[Array[Cell]], private val size: Int
   }
 
 
-  // TODO loop with recursion
-  @tailrec
-  private def _loop(cell: Cell, recursion: Boolean): Boolean = {
-
-    if(cell.getX >= size && cell.getY >= size){
-      return recursion
-    }
-
-    // Operations for cells with a value
-    if(cell.getValue != 0){
-      if(_neighbourChain(cell)) {
-        _loop(_next(cell), true)
-      } else {
-        _loop(_next(cell), recursion)
-      }
-      // Operations for cells without a value
-    } else {
-      if(_oneValid(cell)){
-        _loop(_next(cell), true)
-      } else {
-        _loop(_next(cell), recursion)
-      }
-    }
-
-  }
-
   /* If there is only one valid value for the cell, the value is set and the function will return true.
   If there are more than one valid value for the cell, no value is set and the function returns false */
   private def _oneValid(cell: Cell): Boolean = {
